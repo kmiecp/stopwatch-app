@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stoper</title>
+    <link href="./style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="menu">
+        <svg class="info-btn">
+          <use href="./icons.svg#icon-question-mark"></use>
+        </svg>
+        <svg class="edit"><use href="./icons.svg#icon-edit"></use></svg>
+        <svg class="arch-btn"><use href="./icons.svg#icon-arch"></use></svg>
+      </div>
+      <h1 class="title">Stoper</h1>
+      <h1 class="timer">00:00.0</h1>
+      <p class="info"></p>
+      <div class="buttons">
+        <button class="play">
+          <svg><use href="./icons.svg#icon-play-arrow"></use></svg>
+        </button>
+        <button class="pause">
+          <svg><use href="./icons.svg#icon-pause"></use></svg>
+        </button>
+        <button class="stop">
+          <svg><use href="./icons.svg#icon-stop"></use></svg>
+        </button>
+        <button class="exit">
+          <svg><use href="./icons.svg#icon-close"></use></svg>
+        </button>
+      </div>
+      <div class="colors hidden">
+        <div class="color color-red"></div>
+        <div class="color color-green"></div>
+        <div class="color color-blue"></div>
+      </div>
+    </div>
+
+    <div class="modal-shadow hidden">
+      <div class="modal hidden">
+        <h3>Instrukcja</h3>
+        <p>
+          <svg><use href="./icons.svg#icon-play-arrow"></use></svg>- start
+        </p>
+        <p>
+          <svg><use href="./icons.svg#icon-stop"></use></svg>- stop
+        </p>
+        <p>
+          <svg><use href="./icons.svg#icon-pause"></use></svg>- pauza
+        </p>
+        <p>
+          <svg><use href="./icons.svg#icon-close"></use></svg>- usuwa wszystko
+        </p>
+        <p>
+          <svg><use href="./icons.svg#icon-arch"></use></svg> - wszystkie czasy
+        </p>
+        <button class="close">Zamknij</button>
+      </div>
+      <div class="archive hidden">
+        <h3>Archiwum</h3>
+        <div class="list"></div>
+        <button class="close">Zamknij</button>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

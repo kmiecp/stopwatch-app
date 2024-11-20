@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+:root {
+  /* font type */
+  --font-type: "Roboto", sans-serif;
+  /* font weight */
+  --font-weight: 500;
+  /* font-size */
+  --main-font-size: 16px;
+  /* font color main */
+  --main-font-color: white;
+  /* font color secodn */
+  --second-font-color: gray;
+  /* main background color */
+  --main-bg-color: #63686e;
+  /* first gradient color */
+  --first-grad-col: #606470;
+  /* second gradient color */
+  --sec-grad-col: #060608;
+  /* active color red */
+  --active-color-red: #ff5722;
+  /* active color green*/
+  --active-color-green: #4ef037;
+  /* active color blue*/
+  --active-color-blue: #00eaff;
+  /* active color */
+  --active-color: var(--active-color-green);
+  /* button height */
+  --btn-height: 1.5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+body {
+  background-color: #63686e;
+  font-family: var(--font-type);
+  font-weight: var(--font-weight);
+  height: 100vh;
+  font-size: var(--main-font-size);
+}
+svg {
+  height: 30px;
+  width: 40px;
+  fill: white;
+  cursor: pointer;
+}
+.container {
+  position: relative;
+  min-height: 400px;
+  width: 800px;
+  background: radial-gradient(var(--first-grad-col), var(--sec-grad-col));
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 23px 0px rgba(0, 0, 0, 1);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+button {
+  height: var(--btn-height);
+  background-color: transparent;
+  border: solid 1px var(--active-color);
+  border-radius: 0.5rem;
+  width: 80px;
+  height: 40px;
+  cursor: pointer;
+}
+.menu {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.menu svg:active {
+  fill: var(--active-color);
+}
+.timer {
+  color: var(--active-color);
+}
+.info {
+  width: 100%;
+  height: 30px;
+  text-align: center;
+}
+
+button:active {
+  animation: click 1s;
+}
+@keyframes click {
+  0% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: var(--active-color);
+  }
+}
+button:hover {
+  background-color: var(--active-color);
+}
+.modal-shadow {
+  /* display: none; */
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+}
+.modal,
+.archive {
+  height: 300px;
+  width: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 0.5rem;
+  background: radial-gradient(var(--first-grad-col), var(--sec-grad-col));
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.modal p,
+.archive .list pl {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-left: 2rem;
+}
+.modal use {
+  height: 20px;
+}
+.close {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.modal span {
+  color: var(--active-color);
+  margin-left: 8px;
+}
+.modal h3,
+.archive h3 {
+  align-self: center;
+  margin: 1rem;
+  color: var(--active-color);
+}
+.modal svg {
+  fill: var(--active-color);
+}
+.colors {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: ease-in-out 2s;
+}
+.colors div {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.active {
+  right: 0.5rem;
+  transition: ease-out 1s;
+}
+.hidden {
+  display: none;
+}
+
+.color-red {
+  background-color: var(--active-color-red);
+}
+.color-blue {
+  background-color: var(--active-color-blue);
+}
+.color-green {
+  background-color: var(--active-color-green);
+}
